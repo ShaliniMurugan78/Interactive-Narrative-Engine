@@ -1,0 +1,23 @@
+.genre-selector { margin-bottom: 1rem; }
+.genre-heading { font-family: 'Cinzel Decorative', serif; font-size: 1.1rem; color: var(--gold); text-align: center; margin-bottom: 0.4rem; letter-spacing: 0.08em; }
+.genre-sub { text-align: center; color: var(--text-secondary); font-style: italic; font-size: 0.95rem; margin-bottom: 1.5rem; }
+.genre-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+.genre-card {
+  position: relative; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.5rem 1.25rem; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+  transition: all 0.3s ease; overflow: hidden;
+  animation: fadeUp 0.5s ease forwards; opacity: 0; color: var(--text-primary);
+}
+.genre-glow {
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 0%, var(--accent, #c9a84c), transparent 70%);
+  opacity: 0; transition: opacity 0.4s ease;
+}
+.genre-card:hover .genre-glow, .genre-card.selected .genre-glow { opacity: 0.08; }
+.genre-card:hover { border-color: var(--accent, var(--gold)); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+.genre-card.selected { border-color: var(--gold); background: rgba(201,168,76,0.06); box-shadow: 0 0 24px var(--gold-glow); animation: glow 3s ease infinite; }
+.genre-icon  { font-size: 2.2rem; margin-bottom: 0.3rem; filter: drop-shadow(0 0 8px rgba(255,255,255,0.2)); }
+.genre-label { font-family: 'Cinzel Decorative', serif; font-size: 0.75rem; color: var(--gold); letter-spacing: 0.1em; }
+.genre-desc  { font-size: 0.82rem; color: var(--text-secondary); text-align: center; line-height: 1.4; }
+.genre-check { position: absolute; top: 0.6rem; right: 0.8rem; color: var(--gold); font-size: 0.7rem; animation: pulse 2s infinite; }

@@ -1,0 +1,50 @@
+.ending-page {
+  min-height: 100vh; display: flex; align-items: center;
+  justify-content: center; padding: 2rem; position: relative; overflow: hidden;
+}
+.ending-bg-glow {
+  position: fixed; inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.ending-content {
+  max-width: 640px; width: 100%; text-align: center;
+  position: relative; z-index: 1;
+  background: var(--bg-card); border: 1px solid var(--gold);
+  border-radius: 20px; padding: 3rem 2.5rem;
+  animation: glow 5s ease infinite;
+}
+.ending-crown { font-size: 3.5rem; margin-bottom: 1rem; display: block; }
+.ending-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  color: var(--gold); margin-bottom: 1.5rem; animation: flicker 7s infinite;
+}
+.ending-outcome { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 1.5rem; }
+.eo-label { font-size: 0.7rem; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase; }
+.eo-value {
+  font-family: 'Cinzel Decorative', serif; font-size: 2rem;
+  color: var(--gold-light); text-shadow: 0 0 30px var(--gold-glow);
+}
+.ending-meta {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.5rem; color: var(--text-secondary); font-size: 0.95rem;
+  margin-bottom: 1.5rem; text-transform: capitalize;
+}
+.dot { color: var(--gold-dim); }
+.ending-excerpt {
+  background: rgba(255,255,255,0.02); border: 1px solid var(--border);
+  border-radius: 10px; padding: 1.25rem; margin-bottom: 2rem;
+  font-style: italic; color: var(--text-secondary);
+  font-size: 0.95rem; line-height: 1.7; text-align: left;
+}
+.ending-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+.ending-tree-btn, .ending-new-btn {
+  padding: 0.75rem 1.5rem; border-radius: 8px;
+  font-family: 'Cinzel Decorative', serif; font-size: 0.65rem;
+  letter-spacing: 0.06em; cursor: pointer; transition: all 0.3s;
+}
+.ending-tree-btn { background: transparent; border: 1px solid var(--purple-light); color: var(--purple-light); }
+.ending-tree-btn:hover { background: rgba(107,63,160,0.1); }
+.ending-new-btn { background: transparent; border: 1px solid var(--border); color: var(--text-secondary); }
+.ending-new-btn:hover { border-color: var(--gold); color: var(--gold); }

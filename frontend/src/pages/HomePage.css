@@ -1,0 +1,106 @@
+.home-page {
+  min-height    : 100vh;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  padding       : 2rem 1.5rem 6rem;
+  position      : relative;
+  overflow      : hidden;
+}
+.home-bg-glow {
+  position: fixed; border-radius: 50%;
+  filter: blur(120px); pointer-events: none; z-index: 0;
+}
+.glow-purple {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(107,63,160,0.12) 0%, transparent 70%);
+  top: -150px; left: -150px;
+  animation: gradMove 14s ease infinite; background-size: 200% 200%;
+}
+.glow-gold {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  bottom: -100px; right: -150px;
+  animation: gradMove 18s ease infinite reverse; background-size: 200% 200%;
+}
+.particles { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+.particle  {
+  position: absolute; bottom: -20px;
+  color: var(--gold-dim); animation: drift linear infinite;
+  opacity: 0; user-select: none;
+}
+.home-header {
+  position: relative; z-index: 1;
+  text-align: center; margin-bottom: 2.5rem;
+  animation: fadeUp 1s ease forwards;
+}
+.header-ornament {
+  display: flex; align-items: center;
+  justify-content: center; gap: 0.75rem; margin: 0.5rem 0;
+}
+.orn-line    { flex: 1; max-width: 120px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-dim), transparent); }
+.orn-diamond { color: var(--gold); font-size: 0.7rem; }
+.home-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(2rem, 6vw, 3.5rem); font-weight: 900;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dim), var(--gold));
+  background-size: 300% 300%;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: flicker 6s infinite, gradMove 4s ease infinite;
+  letter-spacing: 0.05em; margin: 0.5rem 0;
+}
+.home-tagline { font-style: italic; color: var(--text-secondary); font-size: 1.05rem; letter-spacing: 0.1em; }
+.step-indicator {
+  display: flex; align-items: center;
+  margin-bottom: 2.5rem; position: relative; z-index: 1;
+  animation: fadeIn 0.8s ease 0.3s forwards; opacity: 0;
+}
+.step-dot { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+.step-dot span {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 2px solid var(--text-dim);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cinzel Decorative', serif; font-size: 0.7rem;
+  color: var(--text-dim); transition: all 0.4s ease;
+}
+.step-dot label { font-size: 0.7rem; color: var(--text-dim); letter-spacing: 0.1em; transition: color 0.4s; }
+.step-dot.active span { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.1); box-shadow: 0 0 16px var(--gold-glow); }
+.step-dot.active label { color: var(--gold); }
+.step-line { width: 80px; height: 1px; background: var(--text-dim); margin: 0 0.5rem 1.5rem; transition: background 0.4s; }
+.step-line.active { background: var(--gold); }
+.home-main { width: 100%; max-width: 880px; position: relative; z-index: 1; }
+.home-cta {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.75rem; width: 100%; padding: 1.1rem 2rem; margin-top: 2rem;
+  background: linear-gradient(135deg, var(--gold-dim), var(--gold), var(--gold-light), var(--gold));
+  background-size: 300% 300%;
+  border: none; border-radius: 10px;
+  color: #05050a; font-family: 'Cinzel Decorative', serif;
+  font-size: 1rem; font-weight: 700; letter-spacing: 0.08em;
+  cursor: pointer; transition: all 0.3s ease;
+  animation: gradMove 4s ease infinite;
+  position: relative; overflow: hidden;
+}
+.home-cta::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transform: translateX(-100%); transition: transform 0.6s ease;
+}
+.home-cta:hover::before { transform: translateX(100%); }
+.home-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(201,168,76,0.35); }
+.cta-arrow { font-size: 1.2rem; transition: transform 0.3s; }
+.home-cta:hover .cta-arrow { transform: translateX(5px); }
+.back-btn {
+  background: transparent; border: 1px solid var(--border);
+  border-radius: 6px; padding: 0.4rem 1rem;
+  color: var(--text-secondary); font-family: 'Crimson Pro', serif;
+  font-size: 0.95rem; cursor: pointer; margin-bottom: 1.5rem; transition: all 0.2s;
+}
+.back-btn:hover { border-color: var(--gold); color: var(--gold); }
+.home-error {
+  color: #e07070; font-size: 0.9rem;
+  padding: 0.7rem 1rem; background: rgba(192,57,43,0.1);
+  border: 1px solid rgba(192,57,43,0.3); border-radius: 6px;
+  margin-top: 1rem; animation: fadeIn 0.3s ease;
+}

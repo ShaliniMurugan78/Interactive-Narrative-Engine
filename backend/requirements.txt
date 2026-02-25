@@ -1,0 +1,32 @@
+# LLM
+groq==0.9.0
+
+# Web Framework
+fastapi==0.111.0
+uvicorn==0.30.1
+
+# Database
+pymongo==4.7.2
+motor==3.4.0
+
+# Environment Variables
+python-dotenv==1.0.1
+
+# HTTP Requests (HuggingFace image API)
+requests==2.32.3
+
+# Image Handling
+Pillow==10.3.0
+
+# PDF Generation
+fpdf2==2.7.9
+
+# Tree Visualization
+networkx==3.3
+matplotlib==3.9.0
+
+# Data Validation
+pydantic==2.7.3
+
+# File Upload Support
+python-multipart==0.0.9

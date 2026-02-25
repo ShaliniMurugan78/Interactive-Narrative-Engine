@@ -1,0 +1,17 @@
+.scene-img-wrap { position: relative; border-radius: 12px; overflow: hidden; margin-bottom: 2rem; border: 1px solid var(--border); max-height: 420px; animation: fadeIn 0.8s ease; }
+.scene-img-wrap.loaded { animation: glow 6s ease infinite; }
+.scene-img-skeleton {
+  width: 100%; height: 300px; background: var(--bg-card);
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; position: relative; overflow: hidden; gap: 0.5rem;
+}
+.skeleton-shimmer { position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.05), transparent); background-size: 200% 100%; animation: shimmer 2s infinite; }
+.skeleton-icon { font-size: 2rem; opacity: 0.3; animation: pulse 2s infinite; }
+.skeleton-text { font-size: 0.8rem; color: var(--text-dim); font-style: italic; }
+.scene-img { width: 100%; max-height: 420px; object-fit: cover; display: block; transition: opacity 0.5s ease; }
+.scene-img-vignette { position: absolute; bottom: 0; left: 0; right: 0; height: 60%; background: linear-gradient(transparent, rgba(5,5,10,0.85)); pointer-events: none; }
+.scene-img-frame { position: absolute; font-size: 0.8rem; color: var(--gold-dim); opacity: 0.6; line-height: 1; }
+.frame-tl { top: 6px; left: 8px; }
+.frame-tr { top: 6px; right: 8px; }
+.frame-bl { bottom: 6px; left: 8px; }
+.frame-br { bottom: 6px; right: 8px; }

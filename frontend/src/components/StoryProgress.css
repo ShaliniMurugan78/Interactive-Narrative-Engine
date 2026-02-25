@@ -1,0 +1,9 @@
+.progress-wrap { padding: 0.5rem 0 1rem; }
+.progress-info { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+.progress-genre { font-family: 'Cinzel Decorative', serif; font-size: 0.65rem; color: var(--gold); letter-spacing: 0.1em; text-transform: capitalize; }
+.progress-turn { font-size: 0.75rem; color: var(--text-dim); }
+.progress-track { position: relative; height: 4px; background: var(--bg-hover); border-radius: 4px; overflow: visible; }
+.progress-fill { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, var(--gold-dim), var(--gold)); border-radius: 4px; transition: width 0.6s ease; }
+.progress-glow { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; border-radius: 50%; background: var(--gold-light); box-shadow: 0 0 10px var(--gold); transition: left 0.6s ease; }
+.progress-tick { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 3px; height: 3px; border-radius: 50%; background: var(--text-dim); transition: background 0.4s; }
+.progress-tick.done { background: var(--gold-dim); }

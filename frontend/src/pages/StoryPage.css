@@ -1,0 +1,50 @@
+.story-page { min-height: 100vh; display: flex; flex-direction: column; position: relative; }
+.story-ambient {
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(107,63,160,0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(201,168,76,0.05) 0%, transparent 50%);
+  pointer-events: none; z-index: 0;
+}
+.story-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.5rem; border-bottom: 1px solid var(--border);
+  background: rgba(5,5,10,0.85); backdrop-filter: blur(16px);
+  position: sticky; top: 0; z-index: 100;
+}
+.nav-btn {
+  background: transparent; border: 1px solid var(--border); border-radius: 6px;
+  padding: 0.4rem 0.9rem; color: var(--text-secondary);
+  font-family: 'Crimson Pro', serif; font-size: 0.9rem; cursor: pointer; transition: all 0.2s;
+}
+.nav-btn:hover { border-color: var(--gold); color: var(--gold); }
+.nav-protagonist {
+  font-family: 'Cinzel Decorative', serif; font-size: 0.75rem;
+  color: var(--gold); letter-spacing: 0.1em; animation: flicker 8s infinite;
+}
+.story-progress-bar { padding: 0.75rem 1.5rem 0; position: relative; z-index: 1; }
+.story-main {
+  max-width: 800px; width: 100%; margin: 0 auto;
+  padding: 1.5rem 1.5rem 6rem; position: relative; z-index: 1;
+}
+.ending-actions {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 1.25rem; padding: 2.5rem;
+  background: var(--bg-card); border: 1px solid var(--gold);
+  border-radius: 16px; text-align: center;
+  animation: glow 4s ease infinite;
+}
+.outcome-badge { display: flex; flex-direction: column; gap: 0.3rem; }
+.outcome-label { font-size: 0.75rem; color: var(--text-secondary); letter-spacing: 0.12em; text-transform: uppercase; }
+.outcome-value {
+  font-family: 'Cinzel Decorative', serif; font-size: 1.6rem;
+  color: var(--gold); text-shadow: 0 0 20px var(--gold-glow);
+  animation: pulse 3s ease infinite;
+}
+.restart-btn {
+  background: transparent; border: 1px solid var(--border); border-radius: 8px;
+  padding: 0.8rem 2rem; color: var(--text-secondary);
+  font-family: 'Cinzel Decorative', serif; font-size: 0.7rem;
+  letter-spacing: 0.08em; cursor: pointer; transition: all 0.3s; width: 100%;
+}
+.restart-btn:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.05); }

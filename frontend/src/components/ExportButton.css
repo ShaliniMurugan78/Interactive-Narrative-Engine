@@ -1,0 +1,16 @@
+.export-btn {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.85rem 1.75rem; background: transparent;
+  border: 1px solid var(--gold); border-radius: 8px; color: var(--gold);
+  font-family: 'Cinzel Decorative', serif; font-size: 0.75rem; letter-spacing: 0.08em;
+  cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden;
+}
+.export-btn::before {
+  content: ''; position: absolute; inset: 0; background: var(--gold);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; z-index: 0;
+}
+.export-btn:hover::before { transform: scaleX(1); }
+.export-btn:hover { color: #05050a; }
+.export-btn.clicked { border-color: #27ae60; color: #27ae60; }
+.export-btn span { position: relative; z-index: 1; }
+.export-icon { font-size: 1rem; }
